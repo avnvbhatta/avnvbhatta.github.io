@@ -1,0 +1,109 @@
+
+@import '../../App.scss';
+
+.portfolio{
+    background:  $primary-color-green;
+    text-align: center;
+    position: relative;
+    background: #7510F7;
+    top: -1vh;
+    
+
+    h1{
+        font-size: 2.5em;
+        color: $primary-color-green;
+        padding-top: 10vh;
+    }
+    .underline{
+        color: #A7033F;
+
+    }
+    
+    .content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 80%;
+        margin: auto;
+    }
+    .app{
+        height: 300px;
+        background: #ffffff;
+        background-image: url('../../images/fills_green.svg');
+
+        background-size: cover;
+        max-width: 350px;
+        width: 300px;
+        margin: 1em 1em;
+        border-radius: 50px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        transition: all 0.3s linear;
+        
+        .appLogo{
+            opacity: 1;
+            transition: all 0.5s ease;
+            position: relative;
+        }
+
+        .info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 2;
+
+            & *{
+                margin: 5px;
+                padding: 5px;
+            }
+
+            .desc{
+                font-size: 2em;
+                color: #7510F7;
+            }
+
+            .learn{
+                outline: 0;
+                border-radius: 50px;
+                color: white;
+                background: $accent;
+                padding: 10px 20px;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                text-decoration: none;
+                &:hover{
+                    background: #c00247;
+                }
+            }
+        }
+
+        &:hover{
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+            & img{
+                opacity: 0;
+            }
+            & .info{
+                opacity: 1;
+            }
+        }
+        
+
+        .appLogo{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+        }
+    }
+    
+   
+}
+
+
