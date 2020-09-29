@@ -3,6 +3,9 @@ import './landing.scss';
 import {Avatar, LinkedInLogo, GithubLogo, ResumeLogo, EmailLogo, Resume, Background} from  "../../images";
 
 import {TimelineLite, Power3} from "gsap";
+import CSSPlugin from 'gsap/CSSPlugin';
+
+const C = CSSPlugin; 
 
 
 const Landing = () => {

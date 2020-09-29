@@ -2,8 +2,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import "./navbar.scss";
 import { Link } from 'react-scroll';
 import {Menu, Close} from  "../../images";
-import {TimelineLite, Power3, TweenMax} from "gsap";
+import {TimelineLite, Power3} from "gsap";
 
+import CSSPlugin from 'gsap/CSSPlugin';
+
+const C = CSSPlugin; 
 
 const NavBar = () => {
     const [showDropdown, setShowDropdown] = useState(false);
