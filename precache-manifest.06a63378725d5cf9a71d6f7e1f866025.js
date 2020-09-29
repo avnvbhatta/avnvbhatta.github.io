@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "28afe5aadf2bb09f4921c1f90f0f993a",
+    "revision": "8b3f213461418b7309c32ff75e65e393",
     "url": "/avnvbhatta.github.io/index.html"
   },
   {
-    "revision": "b38ce26a3c598c6cb8fc",
+    "revision": "97a60f930106878c66cb",
     "url": "/avnvbhatta.github.io/static/css/2.fb346933.chunk.css"
   },
   {
-    "revision": "d84280f53657fd92e255",
+    "revision": "01371a1a75eb2479b4ea",
     "url": "/avnvbhatta.github.io/static/css/main.43089a97.chunk.css"
   },
   {
-    "revision": "b38ce26a3c598c6cb8fc",
-    "url": "/avnvbhatta.github.io/static/js/2.25217e82.chunk.js"
+    "revision": "97a60f930106878c66cb",
+    "url": "/avnvbhatta.github.io/static/js/2.a55008ef.chunk.js"
   },
   {
-    "revision": "6e8dd85a7ad7645296a532daccc88966",
-    "url": "/avnvbhatta.github.io/static/js/2.25217e82.chunk.js.LICENSE.txt"
+    "revision": "a3d5da51d8489a02931a36aa8a33f4e5",
+    "url": "/avnvbhatta.github.io/static/js/2.a55008ef.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d84280f53657fd92e255",
-    "url": "/avnvbhatta.github.io/static/js/main.0088e8e4.chunk.js"
+    "revision": "01371a1a75eb2479b4ea",
+    "url": "/avnvbhatta.github.io/static/js/main.e4d6e2e3.chunk.js"
   },
   {
     "revision": "6716952ee748f980a6ad",
