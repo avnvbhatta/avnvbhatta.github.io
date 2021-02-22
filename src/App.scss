@@ -23,16 +23,13 @@ $accent-hover: #c00247;
 }
 
 
-// h1{
-//   font-family: 'Fira Sans', sans-serif;
-// }
-
 h1{
   color: $primary-color-blue;
   font-weight: lighter;
   text-transform: lowercase;
   font-size: calc(32px + (64 - 32) * ((100vw - 320px) / (1600 - 320)));
   padding: 0.5rem 2rem;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 h2{

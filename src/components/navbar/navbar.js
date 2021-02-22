@@ -15,10 +15,10 @@ const NavBar = () => {
         return (
             <>
                 <Link className="nav-link" activeClass="active" to="portfolio" spy={true} smooth={true} duration={800}  onClick={() => setShowDropdown(false)}>
-                    <h2>portfolio</h2>
+                    <h3>portfolio</h3>
                 </Link>
                 <Link className="nav-link" activeClass="active" to="contact" spy={true} smooth={true} duration={800} offset={150} onClick={() => setShowDropdown(false)}>
-                    <h2>contact me</h2>
+                    <h3>contact me</h3>
                 </Link>
             </>
         )
@@ -26,7 +26,14 @@ const NavBar = () => {
     let navBar = useRef(null);
     let tl = new TimelineLite();
     useEffect(() => {
-        tl.fromTo(navBar, {opacity: 0, ease: Power3.easeOut, duration: 0.1, delay:4}, {opacity: 1, ease: Power3.easeOut, delay: 4}  )
+        var animPlayed = sessionStorage.getItem("loadingAnimPlayed");
+        if(!animPlayed){
+            tl.fromTo(navBar, 
+                {opacity: 0, ease: Power3.easeOut, duration: 0.1, delay:2}, 
+                {opacity: 1, ease: Power3.easeOut, delay: 2, 
+                    onComplete: () => {sessionStorage.setItem("loadingAnimPlayed", true)}
+                })
+        }
 
     }, [])
     return (

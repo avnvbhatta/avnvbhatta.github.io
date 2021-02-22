@@ -78,7 +78,7 @@ const projectsData = {
             'Applied styling consistent to the original Twitch theme and added night mode'
         ],
         code: 'https://github.com/avnvbhatta/twitchstitch',
-        demo: 'https:/twitchstitch.app',
+        demo: 'https://twitchstitch.app',
     },
     MoodMate: {
         name: 'MoodMate',
