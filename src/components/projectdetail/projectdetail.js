@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react';
 import './projectdetail.scss';
-import {MoodMateLogo, TagWithMeGif, TagWithMeLogo, TwitchStitchGif, TwitchStitchGif2, TwitchStitchLogo, TwitchStitch1, TwitchStitch2, TwitchStitch3,
-MoodMateGif, MoodMate1, MoodMate2, MoodMate3, MoodMate4, MoodMate5
+import {
+    TagWithMeLogo, TagWithMeGif, 
+    TwitchStitchLogo, TwitchStitchGif, TwitchStitchGif2, TwitchStitch1, TwitchStitch2, TwitchStitch3,
+    MoodMateLogo, MoodMateGif, MoodMate1, MoodMate2, MoodMate3, MoodMate4, MoodMate5,
+    SeekdLogo, Seekd1, Seekd2,
+    MyPremierLeagueLogo, MyPremierLeague1, MyPremierLeague2, MyPremierLeague3
 } from "../../images";
 
 import Back from "../../images/back.svg";
@@ -13,6 +17,36 @@ import {
 import { Carousel } from 'react-responsive-carousel';
 
 const projectsData = {
+    Seekd: {
+        name: 'Seekd',
+        logo: MoodMateLogo,
+        screenshots: [Seekd1, Seekd2],
+        summary: 'Full-stack web application for posting and browsing personal software projects.',
+        scopes: ['UI/UX', 'Front-End', 'Back-End', 'Database Management', 'Project Management'],
+        technologies: ['React', 'GraphQL', 'MongoDB', 'MongoDB Realm', 'Amazon S3', 'TailwindCSS'],
+        features: [
+            'Designed and developed responsive front-end with reusable components using React and TailwindCSS',
+            'Built and maintained a serverless GraphQL API around a MongoDB database using MongoDB Realm',
+            'Integrated Amazon S3 to store user and project images',
+        ],
+        code: 'https://github.com/avnvbhatta/seekd',
+        demo: 'https://seekd.netlify.app',
+    },
+    MyPremierLeague: {
+        name: 'MyPremierLeague',
+        logo: MoodMateLogo,
+        screenshots: [MyPremierLeague3, MyPremierLeague1, MyPremierLeague2 ],
+        summary: 'Full-stack web application for getting information about soccer teams',
+        scopes: ['UI/UX', 'Front-End', 'Back-End', 'Database Management', 'Project Management'],
+        technologies: ['React', 'TypeScript', 'MongoDB', 'Node.js', 'Express', 'Sass'],
+        features: [
+            'Created wireframes in Figma and developed responsive front-end using React & Sass',
+            'Developed and maintained databases and REST API using Node.js, Express and MongoDB',
+            'Integrated API-Football for fetching soccer data ',
+        ],
+        code: 'https://github.com/avnvbhatta/MyPremierLeagueReactTypescript',
+        demo: 'https://mypremierleague.netlify.app',
+    },
     TagWithMe: {
         name: 'TagWithMe',
         logo: TagWithMeLogo,
@@ -44,7 +78,7 @@ const projectsData = {
             'Applied styling consistent to the original Twitch theme and added night mode'
         ],
         code: 'https://github.com/avnvbhatta/twitchstitch',
-        demo: 'https://twitchstitch.app/',
+        demo: 'https:/twitchstitch.app',
     },
     MoodMate: {
         name: 'MoodMate',

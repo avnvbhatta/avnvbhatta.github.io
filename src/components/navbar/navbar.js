@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import "./navbar.scss";
 import { Link } from 'react-scroll';
-import {Menu, Close} from  "../../images";
-import {TimelineLite, Power3} from "gsap";
+import Menu from "../../images/menu.svg";
+import Close from "../../images/close.svg";
+import {TimelineLite, Power3, TweenMax} from "gsap";
 
-import CSSPlugin from 'gsap/CSSPlugin';
-
-const C = CSSPlugin; 
 
 const NavBar = () => {
     const [showDropdown, setShowDropdown] = useState(false);
@@ -17,10 +15,10 @@ const NavBar = () => {
         return (
             <>
                 <Link className="nav-link" activeClass="active" to="portfolio" spy={true} smooth={true} duration={800}  onClick={() => setShowDropdown(false)}>
-                    Portfolio
+                    <h2>portfolio</h2>
                 </Link>
                 <Link className="nav-link" activeClass="active" to="contact" spy={true} smooth={true} duration={800} offset={150} onClick={() => setShowDropdown(false)}>
-                    Contact Me
+                    <h2>contact me</h2>
                 </Link>
             </>
         )
@@ -28,15 +26,7 @@ const NavBar = () => {
     let navBar = useRef(null);
     let tl = new TimelineLite();
     useEffect(() => {
-        var animPlayed = sessionStorage.getItem("loadingAnimPlayed");
-        if(!animPlayed){
-            tl.fromTo(navBar, 
-                {opacity: 0, ease: Power3.easeOut, duration: 0.1, delay:2}, 
-                {opacity: 1, ease: Power3.easeOut, delay: 2, 
-                    onComplete: () => {sessionStorage.setItem("loadingAnimPlayed", true)}
-                })
-        }
-       
+        tl.fromTo(navBar, {opacity: 0, ease: Power3.easeOut, duration: 0.1, delay:4}, {opacity: 1, ease: Power3.easeOut, delay: 4}  )
 
     }, [])
     return (

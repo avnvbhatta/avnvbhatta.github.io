@@ -5,17 +5,16 @@
     background:  $primary-color-green;
     text-align: center;
     position: relative;
-    background: #7510F7;
-    top: -1vh;
+    z-index: 5;
     
 
     h1{
         font-size: 2.5em;
-        color: $primary-color-green;
+        color: #7510F7;
         padding-top: 10vh;
     }
     .underline{
-        color: #A7033F;
+        color: $accent;
 
     }
     
@@ -43,6 +42,8 @@
         justify-content: center;
         align-content: center;
         transition: all 0.3s linear;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 5px, rgba(0, 0, 0, 0.22) 0px 5px 5px;
+
         
         .appLogo{
             opacity: 1;

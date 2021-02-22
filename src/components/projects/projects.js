@@ -1,6 +1,6 @@
 import React from 'react';
 import './projects.scss';
-import {MoodMateLogo, TagWithMeLogo, TwitchStitchLogo} from "../../images";
+import {MoodMateLogo, TagWithMeLogo, TwitchStitchLogo, SeekdLogo, MyPremierLeagueLogo} from "../../images";
 import {Link} from "react-router-dom";
 
 
@@ -27,9 +27,12 @@ const Projects = () => {
             </div>
             <div className="underline" ></div>        
             <div className="content">
+                <Project projectLogo={SeekdLogo} projectName='Seekd'/>
+                <Project projectLogo={MyPremierLeagueLogo} projectName='MyPremierLeague'/>
                 <Project projectLogo={TagWithMeLogo} projectName='TagWithMe'/>
                 <Project projectLogo={TwitchStitchLogo} projectName='TwitchStitch'/>
                 <Project projectLogo={MoodMateLogo} projectName='MoodMate'/>
+                
             </div>
         </div> 
     )

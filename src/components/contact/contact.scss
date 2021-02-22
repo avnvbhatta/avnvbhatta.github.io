@@ -5,15 +5,14 @@
     min-height: 100vh;
     position: relative;
     top: -10px;
-    background-image: url('../../images/background2.svg');
-    background-size: cover, cover;
     display: flex;
     flex-direction: column;
+    color: #7510F7;
+
     .title{
         h1{
             padding-top: 4em;
             font-size: 2.5em;
-            color: $primary-color-green
         }
         .underline{
             color: $accent;
@@ -27,21 +26,22 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            color: white;
+            color: #7510F7;
             padding: 1em;
             font-size: 1.5em;
             p{
                 margin-left: 1em;
+            color: #7510F7;
+
             }
         }
-        img{
+        svg, img{
             width: 30px;
             height: 30px;
         }
     }
     .or{
         font-size: 2em;
-        color: white;   
     }
     form{
         display: flex;
@@ -54,7 +54,6 @@
 
         p{
             font-size: 2em;
-            color: white;
         }
         input, textarea, button {
             max-width: 500px;

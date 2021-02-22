@@ -1,8 +1,9 @@
-import React, {useRef, useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './contact.scss';
 import axios from "axios";
 import Spinner from '../spinner/spinner';
-import {Email, Phone} from "../../images";
+import Email from "../../images/email.svg";
+import Phone from "../../images/phone_mini.svg";
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -10,12 +11,10 @@ const Contact = () => {
     const [message, setMessage] = useState('');
     const [formSubmitStatus, setFormSubmitStatus] = useState();
     const [isLoading, setIsLoading] = useState(false);
-    const contactFormMessage = useRef(null);
-    
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsLoading(true);
-        setFormSubmitStatus();
         let formData = {
             senderName: name,
             senderEmail: email,
@@ -24,11 +23,11 @@ const Contact = () => {
         try {
             let res = await axios.post('https://website-email-sender.herokuapp.com/', formData);
             if(res.status === 200){
+                setFormSubmitStatus('success');
                 setName('');
                 setEmail('');
                 setMessage('');
                 setIsLoading(false);
-                setFormSubmitStatus('success');
             }
 
         } catch (error) {
@@ -36,13 +35,6 @@ const Contact = () => {
             setIsLoading(false);
         }
     }
-
-    useEffect(() => {
-        if(formSubmitStatus){
-            contactFormMessage.current.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, [formSubmitStatus]);
-    
     
     return ( 
         <div className="contact">
@@ -52,11 +44,15 @@ const Contact = () => {
             </div>
             <div className="info">
                 <div className="email">
-                    <img src={Email} alt=""/>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
                     <p>avnvbhatta@gmail.com</p>
                 </div>
                 <div className="phone">
-                    <img src={Phone} alt=""/>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
                     <p>515-864-1478</p>
                 </div>
             </div>
@@ -76,7 +72,7 @@ const Contact = () => {
             {
                 formSubmitStatus && <div className={formSubmitStatus}>
                                         {formSubmitStatus === 'success' ? 
-                                        <div ref={contactFormMessage}><div>Thank you for reaching out! </div> <div>I will get back to you shortly.</div></div>
+                                        <div><div>Thank you for reaching out! </div> <div>I will get back to you shortly</div></div>
                                         : <div><div>Something went wrong.</div><div>Please try again later.</div></div>}
                                         </div>
                                     
